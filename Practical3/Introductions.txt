@@ -2,4 +2,4 @@ Hello, my name is Peng Dayang.
 I like drinking tea and eating chocolate biscuits.
 I like playing soccer
 I am enjoying learning IBI1 
-I am happy that I can push my repo from Visual Studio Code to GitHub
+I am happy that I can push my repo from Visual Studio Code to GitHub.
