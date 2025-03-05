@@ -5,6 +5,6 @@ I like crisps
 I like playing soccer very much
 I like dogs
 I like running
-I don't like damp weater
+I don't like damp weater.
 
 
