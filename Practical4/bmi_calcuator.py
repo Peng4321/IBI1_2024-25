@@ -5,12 +5,11 @@
 #Finally we output the BMI value and the grade of the person
 weight=float(input('kg:'))
 height=float(input('m:'))
-bmi =  weight/(height**2)
+bmi =round( weight/(height**2),2) #round the BMI value to 2 decimal places
 if bmi<18.5:
     grade='Underweight'
 elif bmi<30 and bmi>=18.5:
     grade='Normal weight'
 else:
     grade='obete'
-bmi=round(bmi,2) #round the BMI value to 2 decimal places
 print(f'Your BMI is {bmi} and you are at {grade}') #output the BMI value
