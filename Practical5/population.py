@@ -4,6 +4,11 @@
 # make two pie chart of the populations of countries in the UK and Zhejiang-neighbouring provinces in China
 uk_countries=[57.11,3.13,1.91,5.45]
 neighbouring_provinces=[65.77,41.88,45.28,61.27,81.15]
+uk_countries_sort=sorted(uk_countries)
+neighbouring_provinces_sort=sorted(neighbouring_provinces)
+
+print(uk_countries_sort)
+print(neighbouring_provinces_sort)
 import matplotlib.pyplot as plt
 import numpy as np
 plt.xlabel('Countries')
