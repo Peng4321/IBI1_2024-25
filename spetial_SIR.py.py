@@ -1,9 +1,13 @@
+#To stimulate the transport progress of illness.
+#1--Infected  0--Susceptible  2--Resistant
 import numpy as np
 import matplotlib.pyplot as plt
+# definite the initial variables
 size = 100  
 beta = 0.3  
 gamma = 0.05  
 steps = 100
+#make the first infection point
 population = np.zeros((size, size), dtype=int)
 outbreak = (np.random.randint(0, size), np.random.randint(0, size))
 population[outbreak] = 1
