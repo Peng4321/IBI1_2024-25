@@ -3,5 +3,6 @@
 import re
 seq = 'ATGCAAGTGGTGTGTCTGTTCTGAGAGGGCCTAA'
 largest_intron = re.findall(r'GT\S+AG',seq)
+intron = largest_intron[0] #change the value type to string
 print(largest_intron)  # This will print the largest intron found in the sequence
-print(len(str(largest_intron))-4)  # This will print the length of the largest intron found in the sequence (excluding the quotes and brackets)
+print(len(intron)) # This will print the length of the largest intron found in the sequence
