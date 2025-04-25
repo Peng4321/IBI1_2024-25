@@ -1,5 +1,4 @@
-# to identify splice sites within gene sequences
-# and find the largest intron in a given sequence
+# to identify splice sites within gene sequences and find the largest intron in a given sequence
 import re
 seq = 'ATGCAAGTGGTGTGTCTGTTCTGAGAGGGCCTAA'
 largest_intron = re.findall(r'GT\S+AG',seq)
