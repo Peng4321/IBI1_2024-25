@@ -16,7 +16,7 @@ S_list=[9999]
 I_list=[1]
 R_list=[0]
 
-# Create the loop to calculate the values of the variables
+# use loop to calculate the values of the variables
 for i in range(1000):
     new_recovered=np.random.choice(range(2),I, p=[1-gamma,gamma]) #for every infected person, we calculate the probability of recovering
     sum_new_recovered=sum(new_recovered)
