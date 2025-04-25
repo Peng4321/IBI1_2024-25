@@ -31,8 +31,8 @@ print("France's average DALYs: ", fra_average)
 plt.plot(uk.Year, uk.DALYs, 'b+')
 plt.xticks(np.arange(1990, 2021, 2), rotation=-20)
 #to give the plot a title and x and y lables 
-plt.title("DALYs in UK")
-plt.xlabel("Year")
+plt.title("DALYs in UK",fontsize=18, fontweight='bold', color='blue',alpha=0.5)
+plt.xlabel("Year",fontsize=10)
 plt.ylabel("DALYs")
 plt.show()
 
