@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:	to determine after how many loops the two random variables have the same value.
+# Answer:	to determine after how many loops the two random variables,which are selected from the 1 to 6,have the same value.
 
 # Import libraries
 # randint allows drawing a random number,
