@@ -23,7 +23,7 @@ for J in np.arange(0.00, 1.10, 0.10):# adjust the population of vaccinated peopl
         infected_rate=beta*I/N
         increase_infected=np.random.choice(range(2),S,p=[1-infected_rate,infected_rate])#for every susceptible person, we calculate the probability of being infected
         sum_increase_infected=sum(increase_infected)
-        I =I+ sum_increase_infected - sum_new_recovered
+        I =I+sum_increase_infected - sum_new_recovered
         S=S-sum_increase_infected
         I_list.append(I)
     plt.plot(I_list, label = f'{J:.0%}', color = cm.viridis(J))
