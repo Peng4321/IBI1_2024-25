@@ -1,7 +1,7 @@
 #the program will read the file line by line 
 #if start with >,find the name of the gene
 #if not start with >, add the sequence to the gene_seq variable
-#when meet the next >(means the last gene sequenc has been fully added),check the gene_seq variable for the TATA box 
+#when meet the next >( means the last gene sequenc has been fully added),check the gene_seq variable for the TATA box 
 #check the last gene seperately
 import re
 import re
