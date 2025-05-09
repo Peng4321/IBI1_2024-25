@@ -6,7 +6,7 @@ os.chdir("C://Users//IBI//IBI1_2024-25//Practical10")
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 
 first_ten_lines=dalys_data.iloc[0:10,2]
-print(first_ten_lines) #the 10th year is 1999 which was recorded in Afghanistan 
+print(first_ten_lines) #the 10th year is 1999 which was recorded in Afghanistan and data s 82624.94
 
 
 list = []
@@ -26,6 +26,12 @@ print("UK's average DALYs: ", uk_average)
 fra= dalys_data.loc[dalys_data.Entity=="France", ["DALYs", "Year"]]
 fra_average = fra.DALYs.mean()
 print("France's average DALYs: ", fra_average)
+if uk_average > fra_average:
+    print("UK's average DALYs is higher than France's average DALYs")
+elif uk_average < fra_average:
+    print("UK's average DALYs is lower than France's average DALYs")
+else:
+    print("UK's average DALYs is equal to France's average DALYs")
 #UK' average DALYs is higher than France's average DALYs
 
 plt.plot(uk.Year, uk.DALYs, 'b+')
