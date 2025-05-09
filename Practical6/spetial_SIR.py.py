@@ -1,7 +1,12 @@
 #To stimulate the transport progress of illness.
 # The SIR model is a simple mathematical model used to describe the spread of infectious diseases in a population.
 # Use the hot plot to show the spread of the disease in a 2D grid.
-# SShow the spread of disease in different stages
+
+#random choose the initial infected person
+# based on the spread rate and the recovery rate, the number of infected people and the number of susceptible people are calculated
+# use for loop to iterate the time steps
+# use the imshow function to show the spread of the disease in a 2D grid
+# Draw the picture of disease situation in different stages
 
 #1--Infected  0--Susceptible  2--Resistant
 import numpy as np
