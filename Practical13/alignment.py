@@ -10,27 +10,27 @@ with open('random.fasta', 'r') as f:
     seq_random = f.read().splitlines()[1:] # read the sequence of random SOD2
     seq_random = ''.join(seq_random) # join the sequence into a single string
 
-from Bio.Align import substitution_matrices
+from Bio.Align import substitution_matrices 
 blosum62 = substitution_matrices.load("BLOSUM62")
-diff_count1 = 0 
-diff_score1 = 0   
+diff_count1 = 0
+score1 = 0  
 for i in range(len(seq_human)):
     if seq_human[i]!= seq_mouse[i]:
         diff_count1 += 1
-        diff_score1 += blosum62[seq_human[i], seq_mouse[i]]
-print(f'The similarity rate betweeen human and mouse SOD2 is {1-(diff_count1/len(seq_human))} and the score is {diff_score1}.')
+    score1 += blosum62[seq_human[i], seq_mouse[i]]
+print(f'The similarity rate betweeen human and mouse SOD2 is {(1-diff_count1/len(seq_human))*100:.2f}% and the score is {score1}.')
 
 diff_count2 =0
-diff_score2 = 0
+score2 = 0
 for i in range(len(seq_human)):
     if seq_human[i]!= seq_random[i]:
         diff_count2 += 1
-        diff_score2 += blosum62[seq_human[i], seq_random[i]]
-print(f'The similarity rate betweeen human and random SOD2 is {1-(diff_count2/len(seq_human))} and the score is {diff_score2}.')
+    score2 += blosum62[seq_human[i], seq_random[i]]
+print(f'The similarity rate betweeen human and random SOD2 is {(1-diff_count2/len(seq_human))*100:.2f}% and the score is {score2}.')
 diff_count3=0
-diff_score3=0
+score3=0
 for i in range(len(seq_mouse)):
     if seq_mouse[i]!= seq_random[i]:
         diff_count3 += 1
-        diff_score3 += blosum62[seq_mouse[i], seq_random[i]]
-print(f'The similarity rate betweeen mouse and random SOD2 is {1-(diff_count3/len(seq_mouse))} and the score is {diff_score3}.')
+    score3 += blosum62[seq_mouse[i], seq_random[i]]
+print(f'The similarity rate betweeen mouse and random SOD2 is {(1-diff_count3/len(seq_mouse))*100:.2f}% and the score is {score3}.')
