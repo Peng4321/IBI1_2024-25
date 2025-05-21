@@ -20,12 +20,13 @@ try:
 
             if not (ns_list and name_list and id_list):
                 continue  
-
+            #considering there are more than one that meet the condition
             ns = ns_list[0].firstChild.nodeValue.strip()
-            name = name_list[0].firstChild.nodeValue.strip()
-            id_ = id_list[0].firstChild.nodeValue.strip()
-            if ns in result and len(isas) > result[ns][2]:
-                result[ns] = (name, id_, len(isas))
+            name = [name_list[0].firstChild.nodeValue.strip()]
+            id_ = [id_list[0].firstChild.nodeValue.strip()]
+            if ns in result and len(isas) >= result[ns][2]:
+                name = name.append(name_list[0].firstChild.nodeValue.strip())    
+                id_ = id_.append(id_list[0].firstChild.nodeValue.strip())
 
         except Exception as inner_e:
             print("Error parsing a <term>:", inner_e)
